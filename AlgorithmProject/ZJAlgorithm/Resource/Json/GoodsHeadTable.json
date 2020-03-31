@@ -1,0 +1,152 @@
+{
+    "code": 0,
+    "data": {
+        "banner_list": [{
+            "param": {
+                "activity_id": "26310",
+                "activity_name": "666优惠券大礼包",
+                "activity_url": "https:\/\/invoicing.oneniceapp.com\/sneakertopic\/20191031ts",
+                "function_tapped": "goods_click_banner"
+            },
+            "pic": "http:\/\/img08.oneniceapp.com\/upload\/resource\/214d88fba32e2552a3936ec2d35f0452.jpg",
+            "url": "https:\/\/invoicing.oneniceapp.com\/sneakertopic\/20191031ts",
+            "license": {
+                "desc": "营业执照",
+                "url_link": "https:\/\/m.oneniceapp.com\/noticeActivity\/index?id=25727"
+            }
+        }, {
+            "param": {
+                "activity_id": "26285",
+                "activity_name": "万圣节乐趣寄存",
+                "activity_url": "https:\/\/invoicing.oneniceapp.com\/sneakerHa\/halloween",
+                "function_tapped": "goods_click_banner"
+            },
+            "pic": "http:\/\/img08.oneniceapp.com\/upload\/resource\/509ca034e9d66d561e68767860bec296.jpg",
+            "url": "https:\/\/invoicing.oneniceapp.com\/sneakerHa\/halloween",
+            "license": {
+                "desc": "营业执照",
+                "url_link": "https:\/\/m.oneniceapp.com\/noticeActivity\/index?id=25727"
+            }
+        }, {
+            "param": {
+                "activity_id": "26257",
+                "activity_name": "全新瑕疵费率降3%",
+                "activity_url": "https:\/\/m.oneniceapp.com\/activity\/pic\/26256",
+                "function_tapped": "goods_click_banner"
+            },
+            "pic": "http:\/\/img08.oneniceapp.com\/upload\/resource\/21efd06d08de823bffa12ca8a40a3ffa.jpeg",
+            "url": "https:\/\/m.oneniceapp.com\/activity\/pic\/26256",
+            "license": {
+                "desc": "营业执照",
+                "url_link": "https:\/\/m.oneniceapp.com\/noticeActivity\/index?id=25727"
+            }
+        }, {
+            "param": {
+                "activity_id": "26037",
+                "activity_name": "宜家",
+                "activity_url": "https:\/\/www.oneniceapp.com\/sneaker_recommend?recommend_id=26036",
+                "function_tapped": "goods_click_banner"
+            },
+            "pic": "http:\/\/img08.oneniceapp.com\/upload\/resource\/d8042ef7a9fa99cdf487e8f6e2d3ad3d.jpg",
+            "url": "https:\/\/www.oneniceapp.com\/sneaker_recommend?recommend_id=26036",
+            "license": {
+                "desc": "营业执照",
+                "url_link": "https:\/\/m.oneniceapp.com\/noticeActivity\/index?id=25727"
+            }
+        }, {
+            "param": {
+                "activity_id": "26245",
+                "activity_name": "cpfm nike",
+                "activity_url": "http:\/\/www.oneniceapp.com\/sneaker_search\/CPFM x NIKE",
+                "function_tapped": "goods_click_banner"
+            },
+            "pic": "http:\/\/img08.oneniceapp.com\/upload\/resource\/67b70c491915c91798348e6764778222.jpeg",
+            "url": "http:\/\/www.oneniceapp.com\/sneaker_search\/CPFM x NIKE",
+            "license": {
+                "desc": "营业执照",
+                "url_link": "https:\/\/m.oneniceapp.com\/noticeActivity\/index?id=25727"
+            }
+        }, {
+            "param": {
+                "activity_id": "25961",
+                "activity_name": "鞋穿不炒公告",
+                "activity_url": "https:\/\/m.oneniceapp.com\/activity\/pic\/25960",
+                "function_tapped": "goods_click_banner"
+            },
+            "pic": "http:\/\/img08.oneniceapp.com\/upload\/resource\/59c3a68bca91eaac4aa7c469077a3e4a.png",
+            "url": "https:\/\/m.oneniceapp.com\/activity\/pic\/25960",
+            "license": {
+                "desc": "营业执照",
+                "url_link": "https:\/\/m.oneniceapp.com\/noticeActivity\/index?id=25727"
+            }
+        }],
+        "dynamic_list": [],
+        "category_list": [{
+            "name": "AJ1",
+            "cover": "http:\/\/img08.oneniceapp.com\/upload\/resource\/6674a0069b3bec0f0d82145783a9c1ca.jpg",
+            "link_url": "http:\/\/www.oneniceapp.com\/sneaker_search\/AJ1"
+        }, {
+            "name": "Converse",
+            "cover": "http:\/\/img08.oneniceapp.com\/upload\/resource\/51e37ff3ffed2e992335bff4385c22fb.jpg",
+            "link_url": "http:\/\/www.oneniceapp.com\/sneaker_search\/converse"
+        }, {
+            "name": "YEEZY",
+            "cover": "http:\/\/img08.oneniceapp.com\/upload\/resource\/2bed0789aed0e17b9323313061e37887.jpg",
+            "link_url": "http:\/\/www.oneniceapp.com\/sneaker_search\/YEEZY"
+        }, {
+            "name": "秋冬新品",
+            "cover": "http:\/\/img08.oneniceapp.com\/upload\/resource\/aab67878bc1665c2da22165c0b35cbcf.jpeg",
+            "link_url": "http:\/\/www.oneniceapp.com\/sneaker_search\/2019年秋冬款"
+        }, {
+            "name": "全部系列",
+            "cover": "http:\/\/img08.oneniceapp.com\/upload\/resource\/69205bc3e66fdfd6e91fdebdc60cb4d9.png",
+            "link_url": "http:\/\/www.oneniceapp.com\/sneaker_category?category_id=3"
+        }],
+        "sale_calendar": {
+            "link_url": "http:\/\/www.oneniceapp.com\/sneaker_sale_calendar?year=2019&month=11&id=359974"
+        },
+        "anti_addiction_list": {
+            "img_url": "http:\/\/img08.oneniceapp.com\/upload\/resource\/e467b5668f93c8b09818a70f7c044f7f.png",
+            "width": 632,
+            "height": 350,
+            "text": "nice好货致力于为用户提供更加完善的服务和交易体验。请您理性交易，合理消费，不要冲动购物。",
+            "isVisible": "no"
+        },
+        "second_banner_list": [{
+            "pic": "http:\/\/img08.oneniceapp.com\/upload\/resource\/39779a28da02ae10001ced21389e4cb0.png",
+            "url": "https:\/\/invoicing.oneniceapp.com\/sneakertopic\/20191031ts",
+            "height": 128,
+            "proportion": 5.3600000000000003
+        }],
+        "roll_banner_list": [],
+        "new_dynamic_list": [{
+            "type": "bid",
+            "name": "高价求购",
+            "cover": "http:\/\/img08.oneniceapp.com\/upload\/resource\/b7ee5177ac80f8f2dd1dc08b1b68483d.jpg",
+            "need_top_margin": "no",
+            "url": "http:\/\/www.oneniceapp.com\/sneakerDealList?show_title=高价求购&type=bid&src=all&orderby=max_bid",
+            "text_info": {
+                "icon_type": "money",
+                "color": "F75026",
+                "first_text": "¥",
+                "middle_text": "13088",
+                "last_text": "",
+                "sub_text": "差价112元"
+            }
+        }, {
+            "type": "sale",
+            "name": "最新降价",
+            "cover": "http:\/\/img08.oneniceapp.com\/upload\/resource\/8af23c504709337664972a39d00ae13f",
+            "need_top_margin": "no",
+            "url": "http:\/\/www.oneniceapp.com\/sneakerDealList?show_title=最新降价&type=sale&src=all&orderby=min_sale",
+            "text_info": {
+                "icon_type": "money",
+                "color": "17C088",
+                "first_text": "¥",
+                "middle_text": "1608",
+                "last_text": "",
+                "sub_text": "降价121元"
+            }
+        }]
+    }
+}

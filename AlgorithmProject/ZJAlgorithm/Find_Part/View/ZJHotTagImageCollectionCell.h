@@ -1,0 +1,28 @@
+//
+//  ZJHotTagImageCollectionCell.h
+//  ZJBaseKitProject
+//
+//  Created by 张君君 on 2019/10/31.
+//  Copyright © 2019年 com.zhangjunjun.com. All rights reserved.
+//
+
+#import "ZJBaseCollectionViewCell.h"
+
+NS_ASSUME_NONNULL_BEGIN
+@class ZJGoodsTableHeadCategoryListModel;
+
+static NSString * const kHotTagCollectionCellID = @"ZJHotTagImageCollectionCellID";
+
+@interface ZJHotTagImageCollectionCell : ZJBaseCollectionViewCell
+
+
+/**
+ 好货 页面
+
+ @param categoryModel model
+ */
+- (void)setGoodsCategoryModel:(ZJGoodsTableHeadCategoryListModel *)categoryModel;
+
+@end
+
+NS_ASSUME_NONNULL_END
