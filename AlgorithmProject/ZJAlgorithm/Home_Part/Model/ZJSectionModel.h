@@ -15,6 +15,23 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *sectionName;
 @property (nonatomic, copy) NSString *sectionClassName;
 
+@end
+
+
+@interface ZJRowImageModel : NSObject
+
+@property (nonatomic, copy) NSString *text;
+@property (nonatomic, copy) NSString *imageURL;
+/**函数名*/
+@property (nonatomic, copy) NSString *functionName;
+
+- (void)setText:(NSString * _Nullable)text
+       imageURL:(NSString * _Nullable)imageURL;
+
+- (void)setText:(NSString * _Nullable)text
+       imageURL:(NSString * _Nullable)imageURL
+   functionName:(NSString * _Nullable )functionName;
+
 
 @end
 

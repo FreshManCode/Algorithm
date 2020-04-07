@@ -47,6 +47,7 @@
 		DF3FBCC223685EEC00DE73D9 /* ZJHomeLoadImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3FBCC123685EEC00DE73D9 /* ZJHomeLoadImageCell.m */; };
 		DF491BA32431DF1F00964A48 /* ZJHomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF491BA22431DF1F00964A48 /* ZJHomeListModel.m */; };
 		DF491BA92431E25600964A48 /* ZJDesignCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF491BA82431E25600964A48 /* ZJDesignCell.m */; };
+		DF650E682435DB0000BDF9FB /* ZJDataSectionThreeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF650E672435DB0000BDF9FB /* ZJDataSectionThreeVC.m */; };
 		DF6517DC236BD73A00F6ADAA /* ZJBaseTableViewContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6517DB236BD73A00F6ADAA /* ZJBaseTableViewContainerView.m */; };
 		DF6517DF236BDC0B00F6ADAA /* ZJHotSortSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6517DE236BDC0B00F6ADAA /* ZJHotSortSelectedView.m */; };
 		DF6517E2236BDC2F00F6ADAA /* ZJHotSortItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6517E1236BDC2F00F6ADAA /* ZJHotSortItemCell.m */; };
@@ -193,6 +194,8 @@
 		DF491BA22431DF1F00964A48 /* ZJHomeListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJHomeListModel.m; sourceTree = "<group>"; };
 		DF491BA72431E25600964A48 /* ZJDesignCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJDesignCell.h; sourceTree = "<group>"; };
 		DF491BA82431E25600964A48 /* ZJDesignCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJDesignCell.m; sourceTree = "<group>"; };
+		DF650E662435DB0000BDF9FB /* ZJDataSectionThreeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJDataSectionThreeVC.h; sourceTree = "<group>"; };
+		DF650E672435DB0000BDF9FB /* ZJDataSectionThreeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJDataSectionThreeVC.m; sourceTree = "<group>"; };
 		DF6517DA236BD73A00F6ADAA /* ZJBaseTableViewContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJBaseTableViewContainerView.h; sourceTree = "<group>"; };
 		DF6517DB236BD73A00F6ADAA /* ZJBaseTableViewContainerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJBaseTableViewContainerView.m; sourceTree = "<group>"; };
 		DF6517DD236BDC0B00F6ADAA /* ZJHotSortSelectedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJHotSortSelectedView.h; sourceTree = "<group>"; };
@@ -648,6 +651,8 @@
 				DF9AB1A92433496300F521C7 /* ZJDataSectionOneVC.m */,
 				DF9AB1A72433496300F521C7 /* ZJDataSectionTwoVC.h */,
 				DF9AB1A22433496300F521C7 /* ZJDataSectionTwoVC.m */,
+				DF650E662435DB0000BDF9FB /* ZJDataSectionThreeVC.h */,
+				DF650E672435DB0000BDF9FB /* ZJDataSectionThreeVC.m */,
 				DF9AB1A32433496300F521C7 /* ZJHomeViewController.h */,
 				DF9AB1A62433496300F521C7 /* ZJHomeViewController.m */,
 			);
@@ -1104,6 +1109,7 @@
 				DFBB1E4E235DBBA70027A635 /* UITableView+FDKeyedHeightCache.m in Sources */,
 				DF21B4C2236AB3F6006EA56F /* ZJHotTagImageCollectionCell.m in Sources */,
 				DF9AB19A2433344F00F521C7 /* ZJSectionModel.m in Sources */,
+				DF650E682435DB0000BDF9FB /* ZJDataSectionThreeVC.m in Sources */,
 				DFBB1E18235D84FC0027A635 /* ZJBaseCommand.m in Sources */,
 				DFBB1DF8235D4A5E0027A635 /* ZJNavBarView.m in Sources */,
 				DFE6E8CE2366E543003A2C11 /* ZJFlowLayoutCell.m in Sources */,
@@ -1333,6 +1339,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 22L8F5N2ZA;
+				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZJAlgorithm/Header/ZJBaseKitHeader.h";
 				INFOPLIST_FILE = ZJAlgorithm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1354,6 +1361,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 22L8F5N2ZA;
+				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZJAlgorithm/Header/ZJBaseKitHeader.h";
 				INFOPLIST_FILE = ZJAlgorithm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

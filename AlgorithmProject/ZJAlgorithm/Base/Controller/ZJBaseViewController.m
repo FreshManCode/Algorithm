@@ -9,6 +9,7 @@
 #import "ZJBaseViewController.h"
 #import "ZJBaseCommand.h"
 #import <YYKit.h>
+#import "UIImageView+ZJCacheImageView.h"
 
 @interface ZJBaseViewController () <UIScrollViewDelegate>
 /**存放用户数据同步的观察者列表 (A->B,B界面数据更新,A界面需要同步的时候)*/
@@ -62,8 +63,10 @@
             break;
             
         default: {
-            [self.navBarView setBackgroundColor:[UIColor whiteColor]];
             [self.navBarView setHidden:false];
+            [self.navBarView setBackgroundColor:[UIColor whiteColor]];
+            [self.navBarView.leftButton setHidden:false];
+            
         }
             break;
     }
@@ -79,7 +82,7 @@
     [super viewDidLoad];
     [self p_disableAutoInset];
     [self zj_addCustomNavigationBar];
-    [self setNavBarType:ZJNavBarHideLeftButton];
+    [self setNavBarType:ZJNavBarDefault];
     
 }
 
@@ -144,21 +147,29 @@
  */
 - (void)showExplainImage:(NSString *)imageURL {
     if (!_imageView) {
-        _imageView = [[YYAnimatedImageView alloc] initWithFrame:CGRectMake(20, ZJNavgationBarHeight, ZJScreenWidth - 20 * 2, 400)];
+        _imageView = [[YYAnimatedImageView alloc] initWithFrame:CGRectMake(30, ZJNavgationBarHeight, ZJScreenWidth - 30 * 2, 400)];
         _imageView.center = self.view.center;
     }
     __weak typeof(self) weakSelf     = self;
-    [_imageView  setImageWithURL:[NSURL URLWithString:imageURL]
-                     placeholder:nil
-                         options:YYWebImageOptionAllowInvalidSSLCertificates
-                      completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
-        if (image) {
-            CGFloat kRatio = image.size.width / image.size.height;
-            CGRect frame   = weakSelf.imageView.frame;
-            frame.size.height    = image.size.width / kRatio;
-            weakSelf.imageView.frame = frame;
-        }
+    [_imageView zj_imageWithURL:imageURL
+                    placeHolder:nil
+                     completion:^(UIImage * _Nullable image) {
+                         if (image) {
+                             CGFloat kRatio = image.size.width / image.size.height;
+                             CGFloat imageHeight = image.size.width / kRatio;
+                             CGRect frame   = weakSelf.imageView.frame;
+                             frame.size.height   =  imageHeight;
+                             frame.origin.y = (ZJScreenHeight - imageHeight)/2.f;
+                             weakSelf.imageView.frame = frame;
+                         }
     }];
+    
+//    [_imageView  setImageWithURL:[NSURL URLWithString:imageURL]
+//                     placeholder:nil
+//                         options:YYWebImageOptionAllowInvalidSSLCertificates
+//                      completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
+//
+//    }];
     [self.view addSubview:_imageView];
 }
 

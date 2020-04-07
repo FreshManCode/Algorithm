@@ -11,3 +11,20 @@
 @implementation ZJSectionModel
 
 @end
+
+@implementation ZJRowImageModel
+- (void)setText:(NSString *)text
+       imageURL:(NSString *)imageURL {
+    [self setText:text imageURL:imageURL functionName:nil];
+}
+
+- (void)setText:(NSString *)text
+       imageURL:(NSString *)imageURL
+   functionName:(NSString *)functionName {
+    self.text     = text;
+    self.imageURL = imageURL;
+    self.functionName = functionName;
+}
+
+
+@end

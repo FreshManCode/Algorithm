@@ -10,12 +10,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void (^ZJLoadURLImage)(UIImage * __nullable image);
+
 @interface UIImageView (ZJCacheImageView)
 
 - (void)zj_imageWithURL:(NSString *)imageURL
             placeHolder:(UIImage *)placeHoder;
 
 
+- (void)zj_imageWithURL:(NSString *)imageURL
+            placeHolder:(UIImage *)placeHoder
+             completion:(ZJLoadURLImage __nullable )completion;
 
 
 @end

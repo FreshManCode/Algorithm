@@ -29,6 +29,7 @@ static NSString * const kListCellID = @"UITableViewCell";
 }
 
 - (void)configureUI {
+    [self setNavBarType:ZJNavBarHideLeftButton];
     [self zj_registerSingleTableViewCell:[UITableViewCell class] cellID:kListCellID];
     [self.dataArray addObject:[ZJHomeListModel initWithBookName:@"大话数据结构"
                                                   pushClassName:@"ZJBigDataDesignVC"]];
