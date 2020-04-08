@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AA26885945CFB0744007E4D4 /* libPods-ZJAlgorithm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C1961C7D3F64EAC9A3974C /* libPods-ZJAlgorithm.a */; };
 		B97527A07CF567EA432EADD9 /* libPods-ZJBaseKitProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B2EEC2934F2E6E430815B0 /* libPods-ZJBaseKitProject.a */; };
+		DF0FFFFB243DBF290099602B /* UIImage+ZJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0FFFFA243DBF290099602B /* UIImage+ZJTools.m */; };
+		DF0FFFFE243DC0CB0099602B /* UIView+ZJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0FFFFD243DC0CB0099602B /* UIView+ZJTools.m */; };
 		DF21B4BF236AB0BD006EA56F /* ZJBaseCollectionContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF21B4BE236AB0BD006EA56F /* ZJBaseCollectionContainerView.m */; };
 		DF21B4C2236AB3F6006EA56F /* ZJHotTagImageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF21B4C1236AB3F6006EA56F /* ZJHotTagImageCollectionCell.m */; };
 		DF21B4C5236AB748006EA56F /* ZJGoodsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF21B4C4236AB748006EA56F /* ZJGoodsHomeViewController.m */; };
@@ -122,6 +124,10 @@
 		6568779F434BA01153D6C9A0 /* Pods-ZJBaseKitProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJBaseKitProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZJBaseKitProject/Pods-ZJBaseKitProject.debug.xcconfig"; sourceTree = "<group>"; };
 		779478A13521121544CE9E15 /* Pods-ZJAlgorithm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJAlgorithm.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZJAlgorithm/Pods-ZJAlgorithm.release.xcconfig"; sourceTree = "<group>"; };
 		C11409BE9E606CB0E1461B4B /* Pods-ZJAlgorithm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJAlgorithm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZJAlgorithm/Pods-ZJAlgorithm.debug.xcconfig"; sourceTree = "<group>"; };
+		DF0FFFF9243DBF290099602B /* UIImage+ZJTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZJTools.h"; sourceTree = "<group>"; };
+		DF0FFFFA243DBF290099602B /* UIImage+ZJTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZJTools.m"; sourceTree = "<group>"; };
+		DF0FFFFC243DC0CB0099602B /* UIView+ZJTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ZJTools.h"; sourceTree = "<group>"; };
+		DF0FFFFD243DC0CB0099602B /* UIView+ZJTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZJTools.m"; sourceTree = "<group>"; };
 		DF21B4BD236AB0BD006EA56F /* ZJBaseCollectionContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJBaseCollectionContainerView.h; sourceTree = "<group>"; };
 		DF21B4BE236AB0BD006EA56F /* ZJBaseCollectionContainerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJBaseCollectionContainerView.m; sourceTree = "<group>"; };
 		DF21B4C0236AB3F6006EA56F /* ZJHotTagImageCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJHotTagImageCollectionCell.h; sourceTree = "<group>"; };
@@ -739,6 +745,10 @@
 				DFBB1E03235D595B0027A635 /* NSString+ZJTools.m */,
 				DF69A6FF237007B600A0578D /* UIColor+ZJExpand.h */,
 				DF69A700237007B600A0578D /* UIColor+ZJExpand.m */,
+				DF0FFFF9243DBF290099602B /* UIImage+ZJTools.h */,
+				DF0FFFFA243DBF290099602B /* UIImage+ZJTools.m */,
+				DF0FFFFC243DC0CB0099602B /* UIView+ZJTools.h */,
+				DF0FFFFD243DC0CB0099602B /* UIView+ZJTools.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1135,6 +1145,7 @@
 				DFBB1DFF235D4CE90027A635 /* UIImageView+ZJCacheImageView.m in Sources */,
 				DFBB1DC4235D43870027A635 /* main.m in Sources */,
 				DFE6E8AF2366BC17003A2C11 /* ZJBaseTableViewCell.m in Sources */,
+				DF0FFFFB243DBF290099602B /* UIImage+ZJTools.m in Sources */,
 				DFBB1E0E235D7FEE0027A635 /* ZJTimerManager.m in Sources */,
 				DF3FBC9C23680F8400DE73D9 /* ZJHomeGoodsHeaderViewController.m in Sources */,
 				DFE6E8B62366BF8E003A2C11 /* ZJBaseCollectionViewController.m in Sources */,
@@ -1170,6 +1181,7 @@
 				DF8D7C0F236987ED007503A8 /* ZJHorizontalCollectionContainerView.m in Sources */,
 				DF9AB1AD2433496300F521C7 /* ZJDataSectionOneVC.m in Sources */,
 				DF3FBCB923683D0D00DE73D9 /* WatchFlowLayout.m in Sources */,
+				DF0FFFFE243DC0CB0099602B /* UIView+ZJTools.m in Sources */,
 				DFE6E8AC2366BBCF003A2C11 /* ZMWaterFlowLayout.m in Sources */,
 				DFBB1E50235DBBA70027A635 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				DF21DD19235E9A7F00E2A734 /* ZJBaseNetResHeadModel.m in Sources */,

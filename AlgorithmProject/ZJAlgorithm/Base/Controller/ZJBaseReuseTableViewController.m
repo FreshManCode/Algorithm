@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.canScroll = true;
     [self zj_registerTableViewCell:self.tableView];
 }
 

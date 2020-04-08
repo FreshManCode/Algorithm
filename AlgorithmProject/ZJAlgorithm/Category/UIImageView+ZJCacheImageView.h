@@ -19,8 +19,22 @@ typedef void (^ZJLoadURLImage)(UIImage * __nullable image);
 
 
 - (void)zj_imageWithURL:(NSString *)imageURL
-            placeHolder:(UIImage *)placeHoder
+            placeHolder:(UIImage * _Nullable)placeHoder
              completion:(ZJLoadURLImage __nullable )completion;
+
+
+
+/**
+ 加载完成之后,需要手动设置图片
+
+ @param imageURL 图片URL
+ @param placeHoder 占位图片
+ @param completion 回调
+ */
+- (void)zj_maunalLoadImageWithURL:(NSString *)imageURL
+                      placeHolder:(UIImage * _Nullable)placeHoder
+                       completion:(ZJLoadURLImage __nullable )completion;
+
 
 
 @end

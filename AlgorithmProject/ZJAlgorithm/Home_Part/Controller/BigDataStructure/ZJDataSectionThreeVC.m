@@ -10,21 +10,21 @@
 #import "ZJDesignCell.h"
 #import "ZJSectionModel.h"
 
-
 #define MaxSize 20
+#define OK 1
+#define ERROR 0
+#define TRUE 1
+#define FALSE 0
+
 //  ElementType根据实际情况而定,这里设定为int
 typedef int  ElementType;
+typedef int Status;
 typedef struct {
     //数组存储数据元素,最大值为MaxSize
     ElementType data[MaxSize];
     //线性表当前长度
     int length ;
 }Sqlist;
-#define OK 1
-#define ERROR 0
-#define TRUE 1
-#define FALSE 0
-typedef int Status;
 
 //  线性表的单链表存储结构
 typedef struct Node {
@@ -33,7 +33,6 @@ typedef struct Node {
 }Node;
 //定义线性表
 typedef struct Node *LinkList;
-
 
 @interface ZJDataSectionThreeVC ()
 
@@ -53,14 +52,12 @@ Sqlist* list;
 //单链表
 LinkList *SingleList;
 
-
 @dynamic dataArray;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self configureUI];
-    
     
 }
 
@@ -162,7 +159,7 @@ LinkList *SingleList;
 - (void)p_readOfSignleLineChart {
     /* 获得链表第i个数据的算法思路:
      1.声明一个指针p指向链表第一个结点,初始化j从1开始;
-     2.当j<i时,就遍历链表,让p的指针向后移动,不断指向下一节点,j累计+1
+     2.当j<i时,就遍历链表,让p的指针向后移动,不断指向下一结点,j累计+1
      3.若到链尾p为空,则说明第i个结点不存在;
      4.否则就查找成功,返回结点p的数据.
      
@@ -185,8 +182,11 @@ LinkList *SingleList;
      */
     [self p_initLineChart];
     ZJNSLOG(@"insert result:%d",LineChartInsert(SingleList, 0, 10));
-    PrintSingleLineChart(SingleList);
+    PrintSingleLineChart(SingleList,"");
     
+    int a;
+    GetElement(SingleList, 4, &a);
+    printf("\n a is :%d",a);
 }
 
 // MARK: - 3.8.2 单链表的删除
@@ -231,12 +231,93 @@ LinkList *SingleList;
      (4.3:将p插入到头结点与前一结点之间.
      
      */
-    LinkList *Linkst = NULL;
-    CreateListHead(Linkst, 50);
-    PrintSingleLineChart(Linkst);
+    //头插入法单链表
+    LinkList HeadLinkst ;
+    CreateListHead(&HeadLinkst, 50);
+    PrintSingleLineChart(&HeadLinkst,"HeadLinkst");
     
-    
+    LinkList *list2 =  (LinkList *)malloc(sizeof(LinkList));
+    [self p_createHeadList:list2 maxNumber:5];
+    PrintSingleLineChart(list2,"list2");
 }
+
+// MARK: - 3.9.2 尾插法
+- (void)p_crateSingleLineChartWithTailMethod {
+    LinkList tailList;
+    CreateListTail(&tailList, 20);
+    PrintSingleLineChart(&tailList, "tailList");
+    
+    LinkList tailList2;
+    [self p_createListWithTailMethod:&tailList2 maxCount:30];
+    PrintSingleLineChart(&tailList2, "tailList2");
+}
+// MARK: - 3.10 单链表的整表删除
+- (void)p_deleteAllLineChart {
+    /* 单链表整表删除的算法思路如下:
+     1.声明一指针p和q;
+     2.将第一个结点赋值给p;
+     3.循环;
+     ->3.1:将下一个结点赋值给q
+     ->3.2:释放p
+     ->3.3 将q赋值给p
+     */
+    LinkList tailList;
+    CreateListTail(&tailList, 20);
+    PrintSingleLineChart(&tailList, "tailList");
+    DeleteLineChart(&tailList);
+    PrintSingleLineChart(&tailList, "tailList");
+}
+
+// MARK: - 3.11 单链表结构与顺序存储结构的优缺点
+- (void)p_summaryOfLineChartAndOrderStorage {
+    /*
+     存储分配方式:
+     1.顺序存储结构用一段连续的存储单元一次存储线性表的数据元素.
+     2.单链表采用链式存储结构,用一组任意的存储单元存放线性表的元素.
+     */
+    /* 时间性能:
+     1.查找:
+     ->1.1 顺序存储结构O(1)
+     ->1.2 单链表O(n)
+     
+     2.插入和删除
+     ->2.1 顺序存储结构需要平均移动表长一半的元素,时间为O(n)
+     ->2.2 单链表在找出某位置的指针后,插入和删除时间仅为O(1)
+     */
+    
+    /*空间性能:
+     1.顺序存储结构需要预分配存储空间,分大了浪费,分小了易发生溢出
+     2.单链表不需要分配存储空间,只要有就可以分配,元素个数也不受限制.
+     */
+    
+    /*
+     1.若线性表需要频繁查找,很少进行插入和删除操作时,宜采用顺序存储结构.若需要频繁插入和删除时,宜采用单链表结构.
+     比如游戏开发中,对于注册用户的个人信息,除了注册时插入数据外,绝大多数情况都是读取,所以应该考虑用顺序存储结构.
+     而游戏中的玩家武器或者装备列表,随着玩家的游戏过程中,可能会随时增加或者删除,此时再用顺序存储就不太合适了,
+     单链表结构就可以大展拳脚.
+     
+     2.当线性表中的元素个数变化较大或者根本不知道有多大时,最好用单链表结构,这样可以不需要考虑存储空间的大小问题.
+     
+     */
+}
+
+//- (NSDictionary *)specialValue:(NSInteger)value {
+//    NSArray *values = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11"];
+//    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithCapacity:0];
+//    NSInteger incredient = 1;
+//    NSInteger maxValue   = value - incredient;
+//    while (maxValue > 0) {
+//        NSString *str_incredict = @(incredient).stringValue;
+//        NSString *str_maxValue  = @(maxValue).stringValue;
+//        if ([values containsObject:str_incredict]
+//            && [values containsObject:str_maxValue]) {
+//            [dictionary setObject:str_maxValue forKey:str_incredict];
+//        }
+//        incredient ++;
+//        maxValue = value - incredient;
+//    }
+//    return dictionary;
+//}
 
 /**初始化线性表*/
 - (void)p_initOrderList {
@@ -289,7 +370,7 @@ Status InsertElement(Sqlist *L,int i,ElementType e) {
         L->data[i] = e;
         return OK;
     }
-    //插入到中间的i位置,i之后的元素都向后移动一个位置
+    //插入到中间的i位置,i之后的元素都向后移动一个位置 (索引增大)
     //记录之前的数据
     for (int j = L->length; j >= i; j -- ) {
         L->data[j] = L->data[j - 1];
@@ -303,7 +384,7 @@ Status DeleteElement(Sqlist * L,int i) {
         return ERROR;
     }
     
-    //插入到中间的i位置,i之后的元素都向后移动一个位置
+    //插入到中间的i位置,i之后的元素都向前移动一个位置 (索引减小)
     //记录之前的数据
     for (int j = i; j <L->length;j ++) {
         L->data[ j - 1] = L->data[j];
@@ -313,10 +394,10 @@ Status DeleteElement(Sqlist * L,int i) {
 }
 
 //线性表的查找操作
-Status GetElement(LinkList L,int i,ElementType *e) {
+Status GetElement(LinkList * L,int i,ElementType *e) {
     int j = 1;
-    LinkList p;//声明一指针p
-    p = L->next;//让p指向链表L的第一个结点
+    LinkList p ;//声明一指针p
+    p = (*L);//让p指向链表L的第一个结点
     while (p && j < i) {
         p = p ->next;
         j++;
@@ -375,37 +456,117 @@ Status LineChartDelete(LinkList *L,int i ,ElementType *e) {
 }
 
 
-void PrintSingleLineChart(LinkList *L) {
+void PrintSingleLineChart(LinkList *L,char *prefix) {
     //  让P指向链表L的第一个结点
     LinkList p = *L;
-    while (p) {
-        printf("L.data is %d",p->data);
+    while (p!=NULL) {
+        printf("%s L.data is %d \n",prefix ? prefix:"",p->data);
         p = p->next;
     }
 }
 
 void CreateListHead(LinkList *L,int n) {
     LinkList p;
-    *L = (LinkList )malloc(sizeof(Node));
+    *L = (LinkList )malloc(sizeof(LinkList));
     //建立一个带头结点的单链表
     (*L)->next = NULL;
     for (int i=0; i < n; i ++) {
+        //相当于每次循环插入结点p
         //生成新结点
         p = (LinkList)malloc(sizeof(Node));
         //随机生成100以内的数字
-        p->data = rand()%100 + 1;
+        p->data = i + 1;
         p->next = (*L)->next;
         //插入到表头
         (*L)->next=p;
     }
-    /*这段算法代码里,我们其实使用的是插队的办法,就是始终让新结点在第一的位置.我们也可以把这种算法称为头插入法:
-     
-     
+    /*这段算法代码里,我们其实使用的是插队的办法,就是始终让新结点在第一的位置.我们也可以把这种算法称为头插入法:*/
+}
+
+- (void)p_createHeadList:(LinkList *)list
+               maxNumber:(int)maxNumber {
+    LinkList p;
+    *list = (LinkList )malloc(sizeof(LinkList));
+    (*list)->next = NULL;
+    for (int i = 0; i < maxNumber; i ++) {
+        p = (LinkList)malloc(sizeof(Node));
+        p->data = i + 1;
+        p->next = (*list)->next;
+        (*list)->next = p;
+    }
+}
+
+// MARK: - 创建链表尾插法
+void CreateListTail(LinkList *L,int n) {
+    LinkList r,p;
+    *L = (LinkList )malloc(sizeof(Node));
+    //r指向尾部的结点
+    r = *L;
+    for (int i = 0; i <n ; i ++) {
+        //生成新结点
+        p = (Node *)malloc(sizeof(Node));
+        p->data = i+10;
+        //将表尾端终结点的指针指向新结点
+        r->next = p;
+        //将当前的新结点定义为表尾终端结点
+        r=p;
+    }
+//  表示当前链表结束
+    r->next = NULL;
+    
+    /*注意:
+     L是指整个单链表,而r是指向尾结点的变量,r会随着循环不断地变化结点,而L则是随着循环增长为一个多结点的链表.
+     r->next = p;其实就是讲刚才的表尾终端结点指向新结点p;
      */
 }
 
 
+- (void)p_createListWithTailMethod:(LinkList *)list
+                          maxCount:(int)maxCount {
+    LinkList r,p;
+    *list = (LinkList)malloc(sizeof(Node));
+    r = *list;
+    for (int i = 0; i < maxCount; i ++) {
+        p = (Node *)malloc(sizeof(Node));
+        p->data = i + 5;
+        r->next = p;
+        r=p;
+    }
+    r->next = NULL;
+}
 
+
+/**
+ 单链表的整表删除
+
+ @param L 链表
+ @return OK
+ */
+Status DeleteLineChart(LinkList *L) {
+    LinkList p,q;
+    //p指向第一个结点
+    p = (*L)->next;
+    while (p) {
+        q = p->next;
+        free(p);
+        q = p;
+    }
+    //头结点指针域为空
+    (*L)->next = NULL;
+    return OK;
+}
+
+Status InitList(LinkList *L) {
+//  产生头结点,并使L指向此头结点
+    *L = (LinkList)malloc(sizeof(Node));
+    if (!(*L)) {
+        return ERROR;
+    }
+    //指针域为NULL
+    (*L) ->next = NULL;
+    NSLog(@"初始化链表成功");
+    return OK;
+}
 
 - (void)p_printOrderList:(NSString *)prefixStr {
     for (int i = 0; i < list->length; i ++) {
@@ -447,7 +608,7 @@ void CreateListHead(LinkList *L,int n) {
 
 - (NSArray <ZJRowImageModel *> *)rowsModel {
     NSMutableArray *tempArray = [NSMutableArray new];
-    for (int i = 0; i < 10; i ++) {
+    for (int i = 0; i < 12; i ++) {
         ZJRowImageModel *model = [ZJRowImageModel new];
         if (i == 0) {
             [model setText:@"1.线性表的定义"
@@ -494,9 +655,19 @@ void CreateListHead(LinkList *L,int n) {
               functionName:@"p_deleteSingleLineChart"];
         }
         else if (i == 9) {
-            [model setText:@"9.单链表的整表创建"
-                  imageURL:kOrderListHeadInsert
-              functionName:@"p_crateSingleLineChart"];
+            [model setText:@"9.单链表的整表创建_头插法"
+                  imageURL:@""
+              functionName:@""];
+        }
+        else if (i == 10) {
+            [model setText:@"10.单链表的整表创建_尾插法"
+                  imageURL:@""
+              functionName:@"p_crateSingleLineChartWithTailMethod"];
+        }
+        else if (i == 11) {
+            [model setText:@"11.单链表的整表删除"
+                  imageURL:@""
+              functionName:@"p_deleteAllLineChart"];
         }
         [tempArray addObject:model];
     }

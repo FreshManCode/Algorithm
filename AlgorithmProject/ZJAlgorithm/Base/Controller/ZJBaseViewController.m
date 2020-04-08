@@ -10,6 +10,8 @@
 #import "ZJBaseCommand.h"
 #import <YYKit.h>
 #import "UIImageView+ZJCacheImageView.h"
+#import "UIImage+ZJTools.h"
+#import "UIView+ZJTools.h"
 
 @interface ZJBaseViewController () <UIScrollViewDelegate>
 /**存放用户数据同步的观察者列表 (A->B,B界面数据更新,A界面需要同步的时候)*/
@@ -146,31 +148,30 @@
  @param imageURL 图片URL
  */
 - (void)showExplainImage:(NSString *)imageURL {
+    __weak typeof(self) weakSelf = self;
     if (!_imageView) {
-        _imageView = [[YYAnimatedImageView alloc] initWithFrame:CGRectMake(30, ZJNavgationBarHeight, ZJScreenWidth - 30 * 2, 400)];
+        _imageView = [[YYAnimatedImageView alloc] initWithFrame:CGRectMake(10, ZJNavgationBarHeight, ZJScreenWidth - 10 * 2, 400)];
+        [_imageView setBackgroundColor:ZJColorWithHexA(0x000000, 0.5)];
         _imageView.center = self.view.center;
+        [_imageView addDoubleTapGesture:^(UITapGestureRecognizer * _Nonnull gesture) {
+            [weakSelf.imageView removeFromSuperview];
+        }];
     }
-    __weak typeof(self) weakSelf     = self;
-    [_imageView zj_imageWithURL:imageURL
-                    placeHolder:nil
-                     completion:^(UIImage * _Nullable image) {
-                         if (image) {
-                             CGFloat kRatio = image.size.width / image.size.height;
-                             CGFloat imageHeight = image.size.width / kRatio;
-                             CGRect frame   = weakSelf.imageView.frame;
-                             frame.size.height   =  imageHeight;
-                             frame.origin.y = (ZJScreenHeight - imageHeight)/2.f;
-                             weakSelf.imageView.frame = frame;
-                         }
-    }];
-    
-//    [_imageView  setImageWithURL:[NSURL URLWithString:imageURL]
-//                     placeholder:nil
-//                         options:YYWebImageOptionAllowInvalidSSLCertificates
-//                      completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
-//
-//    }];
-    [self.view addSubview:_imageView];
+    [_imageView zj_maunalLoadImageWithURL:imageURL
+                              placeHolder:nil
+                               completion:^(UIImage * _Nullable image) {
+                                   if (image) {
+                                       CGFloat kRatio = image.size.width / image.size.height;
+                                       CGFloat imageHeight = image.size.width / kRatio;
+                                       CGRect frame   = weakSelf.imageView.frame;
+                                       frame.size.height   =  imageHeight;
+                                       frame.origin.y = (ZJScreenHeight - imageHeight)/2.f;
+                                       weakSelf.imageView.frame = frame;
+                                       UIImage *newImage = [image addMaskText:@"双击隐藏图片"];
+                                       [weakSelf.imageView setImage:newImage];
+                                   }
+                                   [weakSelf.view addSubview:weakSelf.imageView];
+                               }];
 }
 
 
@@ -232,6 +233,9 @@
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     self.scrollView = scrollView;
+    if (self.canScroll) {
+        return;
+    }
     if (self.canScroll) {
         if (scrollView.contentOffset.y <= 0) {
             self.canScroll = NO;

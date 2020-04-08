@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self p_typeOfStruct];
 }
 
 - (void)p_beiefIntroduce {
@@ -73,6 +74,113 @@
      仅取决于它的一组逻辑特性,而与其在计算机内部如何表示和实现无关.
      
      */
+}
+
+// MARK: - 结构体的几种类型
+- (void)p_typeOfStruct {
+    
+    /**
+     第一种类型结构体,有结构体名,有结构体变量
+     */
+    struct str {
+        int a;
+        int b;
+    }str1;
+    
+    
+    /**
+     第二种类型结构体,有结构体名,无结构体变量
+     */
+    struct str2 {
+        int a;
+        int b;
+    };
+    
+    /**
+     第三种结构体的形式,把结构体重定义为STR3
+     */
+    typedef struct {
+        int a;
+        int b;
+    }STR3;
+    
+    /**
+     第四种类型结构体:把结构体重定义为STR4,还有结构体名称
+     */
+    typedef struct str4 {
+        int a;
+        int b;
+    }STR4;
+    
+    
+    //  定义各类的指针:
+    struct str *p;
+    struct str2 *p2;
+    STR3 *p3;
+    struct str4 *p4;
+    STR4 *p5;
+    
+//  结构体指针指向结构体变量的地址首地址
+    p=&str1;
+    p->a = 1;
+    p->b = 2;
+    printf("p->a = %d,p->b = %d\n",p->a,p->b);
+    //p->a = 1,p->b = 2
+    
+//  为结构体指针分配对应结构体类型的大小的首选地址
+    p2=(struct str2 *)malloc(sizeof(struct str2));
+    p2->a = 2;
+    p2->b = 4;
+    printf("p2->a = %d,p2->b = %d\n",p2->a,p2->b);
+    //p2->a = 2,p2->b = 4
+    
+    //为结构体指针分配对应结构体类型的大小的首地址
+    p3=(STR3 *)malloc(sizeof(STR3));
+    p3->a = 3;
+    p3->b = 6;
+    printf("p3->a = %d,p3->b = %d\n",p3->a,p3->b);
+    //p3->a = 3,p3->b = 6
+    
+//  为结构体指针分配对应结构体类型的大小的首地址
+    p4=(struct str4 *)malloc(sizeof(struct str4));
+    p4->a = 4;
+    p4->b = 8;
+    printf("p4->a = %d,p4->b = %d\n",p4->a,p4->b);
+    //p4->a = 4,p4->b = 8
+    
+    struct str4 str4a;
+    p4=&str4a;//结构体指针指向结构体变量的地址的首地址
+    printf("p4->a = %d,p4->b = %d\n",p4->a,p4->b);
+    //p4->a = 53298882,p4->b = 1
+    p4->a = 41;
+    p4->b = 42;
+    printf("p4->a = %d,p4->b = %d\n",p4->a,p4->b);
+    //p4->a = 1,p4->b = 2
+    
+    //为结构体指针分配对应结构体类型的大小的首选地址
+    p5 = (STR4 *)malloc(sizeof(STR4));
+    p5->a = 5;
+    p5->b = 10;
+    printf("p5->a = %d,p5->b = %d\n",p5->a,p5->b);
+    //p5->a = 5,p5->b = 10
+    
+    //结构体指针指向结构体变量的地址的首地址
+    p5 = &str4a;
+    printf("p5->a = %d,p5->b = %d\n",p5->a,p5->b);
+    //p5->a = 41,p5->b = 42
+    p5->a = 15;
+    p5->b = 16;
+    printf("p5->a = %d,p5->b = %d\n",p5->a,p5->b);
+    //p5->a = 15,p5->b = 16
+    
+    
+    
+
+    
+    
+    
+    
+    
 }
 
 

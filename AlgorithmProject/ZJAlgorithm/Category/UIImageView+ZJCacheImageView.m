@@ -69,4 +69,22 @@
 }
 
 
+/**
+ 加载完成之后,需要手动设置图片
+ 
+ @param imageURL 图片URL
+ @param placeHoder 占位图片
+ @param completion 回调
+ */
+- (void)zj_maunalLoadImageWithURL:(NSString *)imageURL
+                      placeHolder:(UIImage *)placeHoder
+                       completion:(ZJLoadURLImage __nullable )completion {
+    [self setImageWithURL:[NSURL URLWithString:imageURL]
+              placeholder:placeHoder
+                  options:YYWebImageOptionAllowInvalidSSLCertificates|YYWebImageOptionAvoidSetImage
+               completion:^(UIImage * image, NSURL * url, YYWebImageFromType from, YYWebImageStage stage, NSError *  error) {
+                   !completion ? : completion (image);
+               }];
+}
+
 @end
