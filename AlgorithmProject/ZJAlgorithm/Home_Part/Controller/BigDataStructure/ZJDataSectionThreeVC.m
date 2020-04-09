@@ -19,6 +19,7 @@
 //  ElementType根据实际情况而定,这里设定为int
 typedef int  ElementType;
 typedef int Status;
+
 typedef struct {
     //数组存储数据元素,最大值为MaxSize
     ElementType data[MaxSize];
@@ -46,6 +47,8 @@ static NSString * const kOrderListTypeURL = @"https://xunpizhangjj.coding.net/p/
 static NSString * const kOrderListInsert = @"https://xunpizhangjj.coding.net/p/CodingImageURL/d/CodingImageURL/git/raw/master/Alogithm/LineChartInsert.png";
 static NSString * const kOrderListDelete = @"https://xunpizhangjj.coding.net/p/CodingImageURL/d/CodingImageURL/git/raw/master/Alogithm/LineChartDelete.jpeg";
 static NSString * const kOrderListHeadInsert = @"https://xunpizhangjj.coding.net/p/CodingImageURL/d/CodingImageURL/git/raw/master/Alogithm/LineChartHeadInsert.png";
+static NSString * const kOrderListCompare = @"https://xunpizhangjj.coding.net/p/CodingImageURL/d/CodingImageURL/git/raw/master/Alogithm/CompareChart";
+
 
 Sqlist* list;
 
@@ -59,13 +62,54 @@ LinkList *SingleList;
     
     [self configureUI];
     
+    ZJDispatch_async(^{
+        [self p_testAccessAndReadProfile];
+    });
+}
+
+- (void)p_testAccessAndReadProfile {
+    
+    int b  = 10;
+    int *a = &b;
+    //a代表是int类型的指针
+    //*a代表的是这个地址里面的内容,也就是10
+    NSLog(@"%p----%d",a,*a);
+    //0x16b646dec----10
+    
+    
+    NSMutableArray *tempArray = [NSMutableArray new];
+    NSMutableDictionary *dic  = [NSMutableDictionary new];
+    for (int i = 0; i < 10000000; i ++) {
+        [tempArray addObject:@(i)];
+        [dic setObject:@(i) forKey:@(i)];
+    }
+    
+    NSNumber *testNumber = @(8000000);
+    
+    CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
+    NSInteger index = [tempArray indexOfObject:testNumber];
+    CFAbsoluteTime end = CFAbsoluteTimeGetCurrent();
+    NSLog(@"time1 cost: %.3f",end - start);
+    //time cost: 0.350
+    
+    
+    NSNumber * number  = [tempArray objectAtIndex:testNumber.integerValue];
+    CFAbsoluteTime end2 = CFAbsoluteTimeGetCurrent();
+    NSLog(@"time2 cost: %.3f",end2 - end);
+    //time cost: 0.000
+    
+    
+    NSInteger index2      =  [[dic objectForKey:testNumber] integerValue];
+    CFAbsoluteTime end3   = CFAbsoluteTimeGetCurrent();
+    NSLog(@"time3 cost: %.3f",end3 - end2);
+    //time cost: 0.000
 }
 
 // MARK: - 3.2 线性表的定义
 - (void)p_definitionOfLineChart {
     /*线性表(List):零个或多个数据元素的有限序列.
      
-     线性表元素的个数n(n>=0)定义为线性表的额长度,当n=0时,称为空表.
+     线性表元素的个数n(n>=0)定义为线性表的长度,当n=0时,称为空表.
      
      在非空表中的每个数据元素都有一个确定的位置,如a1是第一个数据元素,an是最后一个数据元素,ai是第i个数据元素
      称i为数据元素ai在线性表中的位序.
@@ -297,28 +341,8 @@ LinkList *SingleList;
      单链表结构就可以大展拳脚.
      
      2.当线性表中的元素个数变化较大或者根本不知道有多大时,最好用单链表结构,这样可以不需要考虑存储空间的大小问题.
-     
      */
 }
-
-//- (NSDictionary *)specialValue:(NSInteger)value {
-//    NSArray *values = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11"];
-//    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithCapacity:0];
-//    NSInteger incredient = 1;
-//    NSInteger maxValue   = value - incredient;
-//    while (maxValue > 0) {
-//        NSString *str_incredict = @(incredient).stringValue;
-//        NSString *str_maxValue  = @(maxValue).stringValue;
-//        if ([values containsObject:str_incredict]
-//            && [values containsObject:str_maxValue]) {
-//            [dictionary setObject:str_maxValue forKey:str_incredict];
-//        }
-//        incredient ++;
-//        maxValue = value - incredient;
-//    }
-//    return dictionary;
-//}
-
 /**初始化线性表*/
 - (void)p_initOrderList {
     if (list == NULL) {
@@ -574,13 +598,6 @@ Status InitList(LinkList *L) {
     }
 }
 
-
-- (void)configureUI {
-    [self zj_registerSingleTableViewCell:[ZJDesignCell class] cellID:kDesignCellID];
-    [self.dataArray addObjectsFromArray:[self rowsModel]];
-    [self.tableView reloadData];
-}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 60.f;
 }
@@ -606,9 +623,15 @@ Status InitList(LinkList *L) {
     }
 }
 
+- (void)configureUI {
+    [self zj_registerSingleTableViewCell:[ZJDesignCell class] cellID:kDesignCellID];
+    [self.dataArray addObjectsFromArray:[self rowsModel]];
+    [self.tableView reloadData];
+}
+
 - (NSArray <ZJRowImageModel *> *)rowsModel {
     NSMutableArray *tempArray = [NSMutableArray new];
-    for (int i = 0; i < 12; i ++) {
+    for (int i = 0; i < 13; i ++) {
         ZJRowImageModel *model = [ZJRowImageModel new];
         if (i == 0) {
             [model setText:@"1.线性表的定义"
@@ -668,6 +691,12 @@ Status InitList(LinkList *L) {
             [model setText:@"11.单链表的整表删除"
                   imageURL:@""
               functionName:@"p_deleteAllLineChart"];
+        }
+        else if (i == 12) {
+            [model setText:@"12.单链表结构数据存储结构优缺点"
+                  imageURL:kOrderListCompare
+              functionName:@"p_summaryOfLineChartAndOrderStorage"];
+            
         }
         [tempArray addObject:model];
     }

@@ -55,7 +55,7 @@
 
 - (NSMutableArray <ZJSectionModel *> *)sectionsArray {
     NSMutableArray *tempArray = [NSMutableArray new];
-    for (int i = 0; i < 3; i ++) {
+    for (int i = 0; i < 4; i ++) {
         ZJSectionModel *sectionModel = [ZJSectionModel new];
         if (i == 0) {
             sectionModel.sectionName = @"第一章:数据结构简介";
@@ -68,6 +68,10 @@
         else if (i == 2) {
             sectionModel.sectionName = @"第三章:线性表";
             sectionModel.sectionClassName = @"ZJDataSectionThreeVC";
+        }
+        else if (i == 3) {
+            sectionModel.sectionName = @"第三章:线性表二";
+            sectionModel.sectionClassName = @"ZJDataSectionThreeVC2";
         }
         [tempArray addObject:sectionModel];
     }

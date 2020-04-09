@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - FDFullscreenPopGesture (1.1)
   - IQKeyboardManager (6.3.0)
   - Masonry (1.1.0)
   - MJRefresh (3.1.10)
@@ -29,6 +30,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (= 3.2.1)
+  - FDFullscreenPopGesture (= 1.1)
   - IQKeyboardManager (= 6.3.0)
   - Masonry (= 1.1.0)
   - MJRefresh (= 3.1.10)
@@ -40,6 +42,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - FDFullscreenPopGesture
     - IQKeyboardManager
     - Masonry
     - MJRefresh
@@ -50,6 +53,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   IQKeyboardManager: 2ca9d64893247556f53523dcd8d78641f0ba7c23
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: bb72948c985914b0b5cecac573a2c69a8915fb02
@@ -58,6 +62,6 @@ SPEC CHECKSUMS:
   TZImagePickerController: 99f03b64145a8c92c55b9b1b931410967d9be4cb
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 925fbb0e715cef4996ee109bf5d32ea412628fe4
+PODFILE CHECKSUM: 8815f2dcd5aa0be66bc76abc3bc3c81c02415e7f
 
 COCOAPODS: 1.6.0

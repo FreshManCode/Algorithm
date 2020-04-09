@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AA26885945CFB0744007E4D4 /* libPods-ZJAlgorithm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C1961C7D3F64EAC9A3974C /* libPods-ZJAlgorithm.a */; };
 		B97527A07CF567EA432EADD9 /* libPods-ZJBaseKitProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B2EEC2934F2E6E430815B0 /* libPods-ZJBaseKitProject.a */; };
+		DF0964FC243F091400414C2D /* ZJDataSectionThreeVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0964FB243F091400414C2D /* ZJDataSectionThreeVC2.m */; };
 		DF0FFFFB243DBF290099602B /* UIImage+ZJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0FFFFA243DBF290099602B /* UIImage+ZJTools.m */; };
 		DF0FFFFE243DC0CB0099602B /* UIView+ZJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0FFFFD243DC0CB0099602B /* UIView+ZJTools.m */; };
 		DF21B4BF236AB0BD006EA56F /* ZJBaseCollectionContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF21B4BE236AB0BD006EA56F /* ZJBaseCollectionContainerView.m */; };
@@ -124,6 +125,8 @@
 		6568779F434BA01153D6C9A0 /* Pods-ZJBaseKitProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJBaseKitProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZJBaseKitProject/Pods-ZJBaseKitProject.debug.xcconfig"; sourceTree = "<group>"; };
 		779478A13521121544CE9E15 /* Pods-ZJAlgorithm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJAlgorithm.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZJAlgorithm/Pods-ZJAlgorithm.release.xcconfig"; sourceTree = "<group>"; };
 		C11409BE9E606CB0E1461B4B /* Pods-ZJAlgorithm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJAlgorithm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZJAlgorithm/Pods-ZJAlgorithm.debug.xcconfig"; sourceTree = "<group>"; };
+		DF0964FA243F091400414C2D /* ZJDataSectionThreeVC2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJDataSectionThreeVC2.h; sourceTree = "<group>"; };
+		DF0964FB243F091400414C2D /* ZJDataSectionThreeVC2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJDataSectionThreeVC2.m; sourceTree = "<group>"; };
 		DF0FFFF9243DBF290099602B /* UIImage+ZJTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZJTools.h"; sourceTree = "<group>"; };
 		DF0FFFFA243DBF290099602B /* UIImage+ZJTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZJTools.m"; sourceTree = "<group>"; };
 		DF0FFFFC243DC0CB0099602B /* UIView+ZJTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ZJTools.h"; sourceTree = "<group>"; };
@@ -659,6 +662,8 @@
 				DF9AB1A22433496300F521C7 /* ZJDataSectionTwoVC.m */,
 				DF650E662435DB0000BDF9FB /* ZJDataSectionThreeVC.h */,
 				DF650E672435DB0000BDF9FB /* ZJDataSectionThreeVC.m */,
+				DF0964FA243F091400414C2D /* ZJDataSectionThreeVC2.h */,
+				DF0964FB243F091400414C2D /* ZJDataSectionThreeVC2.m */,
 				DF9AB1A32433496300F521C7 /* ZJHomeViewController.h */,
 				DF9AB1A62433496300F521C7 /* ZJHomeViewController.m */,
 			);
@@ -1112,6 +1117,7 @@
 				DF69A6F8236FD60A00A0578D /* ZJGoodsTableHeadResModel.m in Sources */,
 				DF491BA32431DF1F00964A48 /* ZJHomeListModel.m in Sources */,
 				DF21B4DF236AF14E006EA56F /* ZJCardItemView.m in Sources */,
+				DF0964FC243F091400414C2D /* ZJDataSectionThreeVC2.m in Sources */,
 				DF21B4CF236AC1D9006EA56F /* ZJSortHeaderView.m in Sources */,
 				DFBB1DBC235D43850027A635 /* ZJBaseKitProject.xcdatamodeld in Sources */,
 				DF9AB1972433132000F521C7 /* ZJUploadImageManager.m in Sources */,
