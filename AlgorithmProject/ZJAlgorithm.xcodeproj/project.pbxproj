@@ -58,6 +58,8 @@
 		DF69A6F8236FD60A00A0578D /* ZJGoodsTableHeadResModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF69A6F7236FD60A00A0578D /* ZJGoodsTableHeadResModel.m */; };
 		DF69A6FB236FF49600A0578D /* ZJReadLocalFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF69A6FA236FF49600A0578D /* ZJReadLocalFileManager.m */; };
 		DF69A701237007B600A0578D /* UIColor+ZJExpand.m in Sources */ = {isa = PBXBuildFile; fileRef = DF69A700237007B600A0578D /* UIColor+ZJExpand.m */; };
+		DF740CEE24440BD300013F5D /* ZJDataSectionFourVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF740CED24440BD300013F5D /* ZJDataSectionFourVC.m */; };
+		DF740CF124440D1800013F5D /* ZJAboutStackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF740CF024440D1800013F5D /* ZJAboutStackVC.m */; };
 		DF8D7C0C236986E1007503A8 /* ZJBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8D7C0A236986E1007503A8 /* ZJBaseCollectionViewCell.m */; };
 		DF8D7C0F236987ED007503A8 /* ZJHorizontalCollectionContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8D7C0E236987ED007503A8 /* ZJHorizontalCollectionContainerView.m */; };
 		DF9AB18D2432E75700F521C7 /* NSObject+ZJEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9AB18C2432E75700F521C7 /* NSObject+ZJEncoder.m */; };
@@ -218,6 +220,10 @@
 		DF69A6FA236FF49600A0578D /* ZJReadLocalFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJReadLocalFileManager.m; sourceTree = "<group>"; };
 		DF69A6FF237007B600A0578D /* UIColor+ZJExpand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZJExpand.h"; sourceTree = "<group>"; };
 		DF69A700237007B600A0578D /* UIColor+ZJExpand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZJExpand.m"; sourceTree = "<group>"; };
+		DF740CEC24440BD300013F5D /* ZJDataSectionFourVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJDataSectionFourVC.h; sourceTree = "<group>"; };
+		DF740CED24440BD300013F5D /* ZJDataSectionFourVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJDataSectionFourVC.m; sourceTree = "<group>"; };
+		DF740CEF24440D1800013F5D /* ZJAboutStackVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJAboutStackVC.h; sourceTree = "<group>"; };
+		DF740CF024440D1800013F5D /* ZJAboutStackVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJAboutStackVC.m; sourceTree = "<group>"; };
 		DF8D7C0A236986E1007503A8 /* ZJBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJBaseCollectionViewCell.m; sourceTree = "<group>"; };
 		DF8D7C0B236986E1007503A8 /* ZJBaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJBaseCollectionViewCell.h; sourceTree = "<group>"; };
 		DF8D7C0D236987ED007503A8 /* ZJHorizontalCollectionContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJHorizontalCollectionContainerView.h; sourceTree = "<group>"; };
@@ -664,6 +670,10 @@
 				DF650E672435DB0000BDF9FB /* ZJDataSectionThreeVC.m */,
 				DF0964FA243F091400414C2D /* ZJDataSectionThreeVC2.h */,
 				DF0964FB243F091400414C2D /* ZJDataSectionThreeVC2.m */,
+				DF740CEC24440BD300013F5D /* ZJDataSectionFourVC.h */,
+				DF740CED24440BD300013F5D /* ZJDataSectionFourVC.m */,
+				DF740CEF24440D1800013F5D /* ZJAboutStackVC.h */,
+				DF740CF024440D1800013F5D /* ZJAboutStackVC.m */,
 				DF9AB1A32433496300F521C7 /* ZJHomeViewController.h */,
 				DF9AB1A62433496300F521C7 /* ZJHomeViewController.m */,
 			);
@@ -1124,6 +1134,7 @@
 				DFBB1DE7235D48B00027A635 /* ZJBaseView.m in Sources */,
 				DFBB1E4E235DBBA70027A635 /* UITableView+FDKeyedHeightCache.m in Sources */,
 				DF21B4C2236AB3F6006EA56F /* ZJHotTagImageCollectionCell.m in Sources */,
+				DF740CF124440D1800013F5D /* ZJAboutStackVC.m in Sources */,
 				DF9AB19A2433344F00F521C7 /* ZJSectionModel.m in Sources */,
 				DF650E682435DB0000BDF9FB /* ZJDataSectionThreeVC.m in Sources */,
 				DFBB1E18235D84FC0027A635 /* ZJBaseCommand.m in Sources */,
@@ -1193,6 +1204,7 @@
 				DF21DD19235E9A7F00E2A734 /* ZJBaseNetResHeadModel.m in Sources */,
 				DFBB1E04235D595B0027A635 /* NSString+ZJTools.m in Sources */,
 				DF21B4CC236AB7F1006EA56F /* ZJImageTagTableViewCell.m in Sources */,
+				DF740CEE24440BD300013F5D /* ZJDataSectionFourVC.m in Sources */,
 				DF3FBCC223685EEC00DE73D9 /* ZJHomeLoadImageCell.m in Sources */,
 				DF6517DC236BD73A00F6ADAA /* ZJBaseTableViewContainerView.m in Sources */,
 				DFBB1E29235DB7760027A635 /* ZJBaseReuseTableViewController.m in Sources */,

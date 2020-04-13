@@ -161,16 +161,23 @@
                               placeHolder:nil
                                completion:^(UIImage * _Nullable image) {
                                    if (image) {
+                                       [weakSelf.view addSubview:weakSelf.imageView];
+                                     
                                        CGFloat kRatio = image.size.width / image.size.height;
                                        CGFloat imageHeight = image.size.width / kRatio;
-                                       CGRect frame   = weakSelf.imageView.frame;
-                                       frame.size.height   =  imageHeight;
-                                       frame.origin.y = (ZJScreenHeight - imageHeight)/2.f;
-                                       weakSelf.imageView.frame = frame;
+//                                       CGRect frame   = weakSelf.imageView.frame;
+//                                       frame.size.height   =  imageHeight;
+//                                       frame.origin.y = (ZJScreenHeight - imageHeight)/2.f;
+//                                       weakSelf.imageView.frame = frame;
                                        UIImage *newImage = [image addMaskText:@"双击隐藏图片"];
                                        [weakSelf.imageView setImage:newImage];
+                                       
+                                       [weakSelf.imageView mas_updateConstraints:^(MASConstraintMaker *make) {
+                                           make.centerX.centerY.mas_equalTo(0);
+                                           make.size.mas_equalTo(CGSizeMake(ZJScreenWidth - 20.f, imageHeight));
+                                       }];
                                    }
-                                   [weakSelf.view addSubview:weakSelf.imageView];
+                                   
                                }];
 }
 
@@ -246,6 +253,10 @@
     } else {
         self.canScroll = NO;
     }
+}
+
+- (void)dealloc {
+    ZJNSLOG(@"%s--<<%@>>",__func__,self);
 }
 
 - (dispatch_group_t)group{

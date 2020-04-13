@@ -19,7 +19,7 @@
 - (UIImage *)addMaskText:(NSString *)text {
     CGFloat imageW = self.size.width;
     CGFloat imageH = self.size.height;
-    UIGraphicsBeginImageContext(self.size);
+    UIGraphicsBeginImageContextWithOptions(self.size, false, [UIScreen mainScreen].scale);
     [self drawInRect:CGRectMake(0, 0, imageW, imageH)];
 //    [text drawInRect:CGRectMake(0, 10, imageW, 20) withAttributes:@{NSFontAttributeName:ZJFont(15.f),NSForegroundColorAttributeName:[UIColor redColor]}];
     [text drawInRect:CGRectMake(0, 10, imageW, 20) withAttributes:[self attributesWithText:text]];

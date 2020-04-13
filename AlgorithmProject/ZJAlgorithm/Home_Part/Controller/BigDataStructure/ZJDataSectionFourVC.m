@@ -1,23 +1,22 @@
 //
-//  ZJBigDataDesignVC.m
+//  ZJDataSectionFourVC.m
 //  ZJAlgorithm
 //
-//  Created by 张君君 on 2020/3/30.
+//  Created by 张君君 on 2020/4/13.
 //  Copyright © 2020年 com.zhangjunjun.com. All rights reserved.
 //
 
-#import "ZJBigDataDesignVC.h"
+#import "ZJDataSectionFourVC.h"
 #import "ZJDesignCell.h"
 #import "ZJSectionModel.h"
 
-@interface ZJBigDataDesignVC ()
+@interface ZJDataSectionFourVC ()
 
 @property (nonatomic, strong) NSMutableArray <ZJSectionModel *> *dataArray;
 
-
 @end
 
-@implementation ZJBigDataDesignVC
+@implementation ZJDataSectionFourVC
 
 @dynamic dataArray;
 
@@ -55,11 +54,11 @@
 
 - (NSMutableArray <ZJSectionModel *> *)sectionsArray {
     NSMutableArray *tempArray = [NSMutableArray new];
-    for (int i = 0; i < 5; i ++) {
+    for (int i = 0; i < 1; i ++) {
         ZJSectionModel *sectionModel = [ZJSectionModel new];
         if (i == 0) {
-            sectionModel.sectionName = @"第一章:数据结构简介";
-            sectionModel.sectionClassName = @"ZJDataSectionOneVC";
+            sectionModel.sectionName = @"4.1 栈的定义相关";
+            sectionModel.sectionClassName = @"ZJAboutStackVC";
         }
         else if (i == 1) {
             sectionModel.sectionName = @"第二章:算法";

@@ -537,7 +537,6 @@ void CreateListTail(LinkList *L,int n) {
     }
 //  表示当前链表结束
     r->next = NULL;
-    
     /*注意:
      L是指整个单链表,而r是指向尾结点的变量,r会随着循环不断地变化结点,而L则是随着循环增长为一个多结点的链表.
      r->next = p;其实就是讲刚才的表尾终端结点指向新结点p;
