@@ -212,10 +212,42 @@ static NSString * const kTwoStackShare = @"https://xunpizhangjj.coding.net/p/Cod
      9.最后一个数字2,输出,总的表达式9 3 1 - 3 * +10 2
      10.因为已经到最后,所以将栈中符号全部出栈并输出,最终输出的后缀表达式结果为 9 3 1-3*+10 2/+
      
-     
-     
      */
 }
+
+// MARK: - 4.9.1 栈的应用--递归
+- (void)p_recursionOfStack {
+    /*斐波那契数列实现
+     1->1->2->3->5->8->13->21->34...
+     这个数列有个十分明显的特点:前面相邻两项之和,构成了后一项
+     */
+    /*
+     递归定义:把一个直接调用自己或通过一系列的调用语句间接地调用自己的函数,称做递归函数.
+     
+     递归和迭代的区别:迭代使用的是循环结构,递归使用的是选择结构.
+     递归能使程序的结构更清晰,更简洁,更容易让人理解,从而减少读懂代码的时间.但是大量的递归调用会建立函数的副本,会
+     耗费大量的时间和内存.迭代则不需要反复调用函数和占用额外的内存.因此我们应该视不同情况选择不用的代码实现方式.
+     */
+    
+    /* 递归和栈的关系
+     简单说,就是在前行阶段,对于每一层递归,函数的局部变量,参数值以及返回地址都被压入栈中.在退回阶段,位于栈顶的局部变量,
+     参数值和返回地址被弹出,用于返回调用层次中执行代码的其余部分,也就是恢复了调用的状态.
+     
+     */
+    
+}
+
+int Fbi(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    else if (n == 1) {
+        return 1;
+    }
+    //这里Fbi 就是函数自己,他在调用自己
+    return Fbi(n-1) + Fbi(n-2);
+}
+
 
 Status OrderPush(SqStack *S,SEelemType e) {
 //  满栈了
@@ -377,9 +409,9 @@ void ChainPrint (LinkStack *s) {
               functionName:@"p_applyOfStack"];
         }
         else if (i == 5) {
-            [model setText:@"3.14 双向链表"
+            [model setText:@"4.9.1 栈的应用---递归"
                   imageURL:nil
-              functionName:@"p_doubleCycleLineChart"];
+              functionName:@"p_recursionOfStack"];
         }
         else if (i == 6) {
             [model setText:@"3.14.1 双向链表的插入"

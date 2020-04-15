@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AA26885945CFB0744007E4D4 /* libPods-ZJAlgorithm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C1961C7D3F64EAC9A3974C /* libPods-ZJAlgorithm.a */; };
-		B97527A07CF567EA432EADD9 /* libPods-ZJBaseKitProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B2EEC2934F2E6E430815B0 /* libPods-ZJBaseKitProject.a */; };
 		DF0964FC243F091400414C2D /* ZJDataSectionThreeVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0964FB243F091400414C2D /* ZJDataSectionThreeVC2.m */; };
 		DF0FFFFB243DBF290099602B /* UIImage+ZJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0FFFFA243DBF290099602B /* UIImage+ZJTools.m */; };
 		DF0FFFFE243DC0CB0099602B /* UIView+ZJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0FFFFD243DC0CB0099602B /* UIView+ZJTools.m */; };
@@ -31,6 +30,7 @@
 		DF21DD2B235EAF4D00E2A734 /* ZJBaseNetImageAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = DF21DD2A235EAF4D00E2A734 /* ZJBaseNetImageAdapter.m */; };
 		DF21DD2E235ED25200E2A734 /* ZJMainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF21DD2D235ED25200E2A734 /* ZJMainTabBarViewController.m */; };
 		DF21DD31235ED27100E2A734 /* ZJBaseNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF21DD30235ED27100E2A734 /* ZJBaseNavgationController.m */; };
+		DF28FA602445632F0096D167 /* ZJAboutQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DF28FA5F2445632F0096D167 /* ZJAboutQueue.m */; };
 		DF3FBC9023680B6200DE73D9 /* ZJWaitHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3FBC8F23680B6200DE73D9 /* ZJWaitHUDView.m */; };
 		DF3FBC9423680C4100DE73D9 /* SCGIFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3FBC9323680C4100DE73D9 /* SCGIFImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DF3FBC9923680CE000DE73D9 /* wait-icon-gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = DF3FBC9823680CE000DE73D9 /* wait-icon-gif.gif */; };
@@ -111,6 +111,8 @@
 		DFE6E8CE2366E543003A2C11 /* ZJFlowLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE6E8CC2366E543003A2C11 /* ZJFlowLayoutCell.m */; };
 		DFE6E8D12366E59A003A2C11 /* NSObject+YWMethodAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE6E8D02366E59A003A2C11 /* NSObject+YWMethodAddition.m */; };
 		DFE6E8D42366E6A3003A2C11 /* UIView+Constraints.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE6E8D32366E6A3003A2C11 /* UIView+Constraints.m */; };
+		DFF147822446DC4B00076E86 /* ZJDataSectionFiceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF147812446DC4B00076E86 /* ZJDataSectionFiceVC.m */; };
+		DFF14788244719DF00076E86 /* ZJDataSectionSixVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF14787244719DF00076E86 /* ZJDataSectionSixVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +176,8 @@
 		DF21DD2D235ED25200E2A734 /* ZJMainTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJMainTabBarViewController.m; sourceTree = "<group>"; };
 		DF21DD2F235ED27100E2A734 /* ZJBaseNavgationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJBaseNavgationController.h; sourceTree = "<group>"; };
 		DF21DD30235ED27100E2A734 /* ZJBaseNavgationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJBaseNavgationController.m; sourceTree = "<group>"; };
+		DF28FA5E2445632F0096D167 /* ZJAboutQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJAboutQueue.h; sourceTree = "<group>"; };
+		DF28FA5F2445632F0096D167 /* ZJAboutQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJAboutQueue.m; sourceTree = "<group>"; };
 		DF3FBC8E23680B6200DE73D9 /* ZJWaitHUDView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJWaitHUDView.h; sourceTree = "<group>"; };
 		DF3FBC8F23680B6200DE73D9 /* ZJWaitHUDView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJWaitHUDView.m; sourceTree = "<group>"; };
 		DF3FBC9223680C4100DE73D9 /* SCGIFImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGIFImageView.h; sourceTree = "<group>"; };
@@ -332,8 +336,11 @@
 		DFE6E8D02366E59A003A2C11 /* NSObject+YWMethodAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YWMethodAddition.m"; sourceTree = "<group>"; };
 		DFE6E8D22366E6A3003A2C11 /* UIView+Constraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Constraints.h"; sourceTree = "<group>"; };
 		DFE6E8D32366E6A3003A2C11 /* UIView+Constraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Constraints.m"; sourceTree = "<group>"; };
+		DFF147802446DC4B00076E86 /* ZJDataSectionFiceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJDataSectionFiceVC.h; sourceTree = "<group>"; };
+		DFF147812446DC4B00076E86 /* ZJDataSectionFiceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJDataSectionFiceVC.m; sourceTree = "<group>"; };
+		DFF14786244719DF00076E86 /* ZJDataSectionSixVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJDataSectionSixVC.h; sourceTree = "<group>"; };
+		DFF14787244719DF00076E86 /* ZJDataSectionSixVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJDataSectionSixVC.m; sourceTree = "<group>"; };
 		E6D32A348404F45101789E21 /* Pods-ZJBaseKitProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJBaseKitProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZJBaseKitProject/Pods-ZJBaseKitProject.release.xcconfig"; sourceTree = "<group>"; };
-		E9B2EEC2934F2E6E430815B0 /* libPods-ZJBaseKitProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZJBaseKitProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C1961C7D3F64EAC9A3974C /* libPods-ZJAlgorithm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZJAlgorithm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -342,7 +349,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B97527A07CF567EA432EADD9 /* libPods-ZJBaseKitProject.a in Frameworks */,
 				AA26885945CFB0744007E4D4 /* libPods-ZJAlgorithm.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,7 +366,6 @@
 		66A0CB7FE0D75BFDD4F903D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E9B2EEC2934F2E6E430815B0 /* libPods-ZJBaseKitProject.a */,
 				E9C1961C7D3F64EAC9A3974C /* libPods-ZJAlgorithm.a */,
 			);
 			name = Frameworks;
@@ -674,6 +679,12 @@
 				DF740CED24440BD300013F5D /* ZJDataSectionFourVC.m */,
 				DF740CEF24440D1800013F5D /* ZJAboutStackVC.h */,
 				DF740CF024440D1800013F5D /* ZJAboutStackVC.m */,
+				DF28FA5E2445632F0096D167 /* ZJAboutQueue.h */,
+				DF28FA5F2445632F0096D167 /* ZJAboutQueue.m */,
+				DFF147802446DC4B00076E86 /* ZJDataSectionFiceVC.h */,
+				DFF147812446DC4B00076E86 /* ZJDataSectionFiceVC.m */,
+				DFF14786244719DF00076E86 /* ZJDataSectionSixVC.h */,
+				DFF14787244719DF00076E86 /* ZJDataSectionSixVC.m */,
 				DF9AB1A32433496300F521C7 /* ZJHomeViewController.h */,
 				DF9AB1A62433496300F521C7 /* ZJHomeViewController.m */,
 			);
@@ -1168,6 +1179,7 @@
 				DFE6E8B62366BF8E003A2C11 /* ZJBaseCollectionViewController.m in Sources */,
 				DF9AB18D2432E75700F521C7 /* NSObject+ZJEncoder.m in Sources */,
 				DF3FBCA12368177F00DE73D9 /* ZJHomeCollectionHeaderView.m in Sources */,
+				DF28FA602445632F0096D167 /* ZJAboutQueue.m in Sources */,
 				DF3FBCBC236857BB00DE73D9 /* ZJDiscoverlistItemModel.m in Sources */,
 				DFBB1DE4235D487C0027A635 /* ZJBaseViewController.m in Sources */,
 				DF3FBC9423680C4100DE73D9 /* SCGIFImageView.m in Sources */,
@@ -1206,7 +1218,9 @@
 				DF21B4CC236AB7F1006EA56F /* ZJImageTagTableViewCell.m in Sources */,
 				DF740CEE24440BD300013F5D /* ZJDataSectionFourVC.m in Sources */,
 				DF3FBCC223685EEC00DE73D9 /* ZJHomeLoadImageCell.m in Sources */,
+				DFF147822446DC4B00076E86 /* ZJDataSectionFiceVC.m in Sources */,
 				DF6517DC236BD73A00F6ADAA /* ZJBaseTableViewContainerView.m in Sources */,
+				DFF14788244719DF00076E86 /* ZJDataSectionSixVC.m in Sources */,
 				DFBB1E29235DB7760027A635 /* ZJBaseReuseTableViewController.m in Sources */,
 				DF21DD25235EA48B00E2A734 /* ZJParseHelper.m in Sources */,
 			);

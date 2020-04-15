@@ -54,15 +54,15 @@
 
 - (NSMutableArray <ZJSectionModel *> *)sectionsArray {
     NSMutableArray *tempArray = [NSMutableArray new];
-    for (int i = 0; i < 1; i ++) {
+    for (int i = 0; i < 2; i ++) {
         ZJSectionModel *sectionModel = [ZJSectionModel new];
         if (i == 0) {
             sectionModel.sectionName = @"4.1 栈的定义相关";
             sectionModel.sectionClassName = @"ZJAboutStackVC";
         }
         else if (i == 1) {
-            sectionModel.sectionName = @"第二章:算法";
-            sectionModel.sectionClassName = @"ZJDataSectionTwoVC";
+            sectionModel.sectionName = @"4.10 队列的定义相关";
+            sectionModel.sectionClassName = @"ZJAboutQueue";
         }
         else if (i == 2) {
             sectionModel.sectionName = @"第三章:线性表";
